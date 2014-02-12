@@ -17,7 +17,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-		<receiver android:name="com.example.mtksimman.ExampleAppWidgetProvider" >
+		<receiver android:name="dotnetpart.packages.mtksimman.ExampleAppWidgetProvider" >
 		    <intent-filter>
 		        <action android:name="android.intent.action.DUAL_SIM_MODE" />
 		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

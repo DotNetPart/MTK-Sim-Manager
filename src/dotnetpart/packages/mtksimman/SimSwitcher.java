@@ -1,4 +1,4 @@
-package com.example.mtksimman;
+package dotnetpart.packages.mtksimman;
 
 import android.content.ContentResolver;
 import android.content.ContextWrapper;

@@ -1,4 +1,6 @@
-package com.example.mtksimman;
+package dotnetpart.packages.mtksimman;
+
+import com.example.mtksimman.R;
 
 import android.os.Bundle;
 import android.app.Activity;
