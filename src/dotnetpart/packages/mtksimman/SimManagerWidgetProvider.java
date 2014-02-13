@@ -11,7 +11,7 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.widget.RemoteViews;
 
-public class ExampleAppWidgetProvider extends AppWidgetProvider {
+public class SimManagerWidgetProvider extends AppWidgetProvider {
 
     private static final String SIM1_CLICKED    = "firstSimSwitchClick";
     private static final String SIM2_CLICKED    = "secondSimSwitchClick";
@@ -22,7 +22,7 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
         ComponentName widget;
 
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
-        widget = new ComponentName(context, ExampleAppWidgetProvider.class);
+        widget = new ComponentName(context, SimManagerWidgetProvider.class);
 
         int currentState = Settings.System.getInt(context.getContentResolver(), "dual_sim_mode_setting", -1);
         if (currentState == 1 || currentState == 3)
@@ -65,7 +65,7 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
             ComponentName watchWidget;
             
         	remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
-            watchWidget = new ComponentName(context, ExampleAppWidgetProvider.class);
+            watchWidget = new ComponentName(context, SimManagerWidgetProvider.class);
 
         	int mode = intent.getIntExtra("mode", -1);
         	switch (mode)
@@ -102,7 +102,7 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
         ComponentName widget;
 
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
-        widget = new ComponentName(context, ExampleAppWidgetProvider.class);
+        widget = new ComponentName(context, SimManagerWidgetProvider.class);
 
         int currentState = Settings.System.getInt(context.getContentResolver(), "dual_sim_mode_setting", -1);
         int newState = 0;
@@ -128,7 +128,7 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
     
     protected PendingIntent getPendingSelfIntent(Context context, String action, int appWidgetIds) {
 		Intent launchIntent = new Intent();
-		launchIntent.setClass(context, ExampleAppWidgetProvider.class);
+		launchIntent.setClass(context, SimManagerWidgetProvider.class);
 		launchIntent.setAction(action);
 
 		PendingIntent pi = PendingIntent.getBroadcast(context, appWidgetIds,
